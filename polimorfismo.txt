@@ -1,0 +1,49 @@
+//index
+
+<?php
+
+include './Poligono.php';
+include './Cuadrado.php';
+include './Rectangulo.php';
+
+function area($obj){
+    $obj->calculo();
+}
+
+$cuadrado = new Cuadrado();
+$rectangulo = new Rectangulo();
+
+area($cuadrado);
+area($rectangulo);
+
+//poligono
+
+<?php
+
+class Poligono {
+    function calculo(){
+        echo 'El area depende del tipo de poligono';
+    }
+}
+
+//cuadrado
+
+<?php
+
+class Cuadrado extends Poligono {
+    
+    function calculo(){
+        echo 'area de un cuadrado : a=l*l<br>';
+    }
+}
+
+//rectangulo
+
+<?php
+
+class Rectangulo extends Poligono {
+    function calculo() {
+        echo 'area de un rectangulo : a=b*h<br>';
+}
+    
+}
